@@ -135,6 +135,16 @@ class Dashboard extends CI_Controller {
 		$this->halaman->data_halaman();
 	}
 
+	public function detail_halaman($id)
+	{
+		$this->halaman->detail_halaman();
+	}
+
+	public function ubah_halaman($id)
+	{
+		$this->halaman->ubah_halaman($id);
+	}
+
 	public function data_berita() // filter akses: lihat dan hapus (di halaman data-berita)
 	{
 		if (is_null($this->session->userdata('bisa_buat_berita')) && is_null($this->session->userdata('bisa_lihat_berita')) && is_null($this->session->userdata('bisa_ubah_berita')) && is_null($this->session->userdata('bisa_hapus_berita'))) {
